@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Išmanus termometras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle">🌙</button> 
+
+    <div class="thermometer-container">
+        <h1>Išmanus termometras</h1>
+        
+        <div class="city-input-container">
+            <input type="text" id="city-input" placeholder="Ieškoti miesto...">
+            <div id="autocomplete-list" class="autocomplete-list"></div>
+            <button id="search-button">Atnaujinti</button>
+        </div>
+
+        
+        <button id="temp-unit-toggle">Switch to °F</button>
+
+
+        <div id="current-weather-card">
+            
+        </div>
+
+        <div class="daily-forecast-container" id="daily-forecast-container">
+            
+        </div>
+
+        
+        <div id="clock">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

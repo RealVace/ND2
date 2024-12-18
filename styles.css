@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('img/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.thermometer-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .thermometer-container {
+    background: #333;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.city-input-container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.autocomplete-list {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .autocomplete-list {
+    background-color: #444;
+    border-color: #666;
+}
+
+.autocomplete-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover {
+    background-color: #f0f0f0;
+}
+
+.dark-mode .autocomplete-item:hover {
+    background-color: #555;
+}
+
+.temperature-display {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.daily-forecast-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    margin: 20px 0;
+}
+
+.day-card {
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 140px;
+    margin: 0 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: none;
+}
+
+.dark-mode .day-card {
+    background: #444;
+    box-shadow: none;
+}
+
+.day-card img {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.day-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.status {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.dark-mode .status {
+    color: #ddd;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    color: #333;
+    box-shadow: none;
+    border: none;
+}
+
+.dark-mode .modal-content {
+    background: #444;
+    color: #fff;
+    box-shadow: none;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icon img {
+    width: 30px;
+    height: 30px;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ddd;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode #theme-toggle {
+    background: #444;
+    color: #fff;
+}
+
+#clock {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.day-card:not(.dark-mode) {
+    background-color: #fff;
+    color: #333;
+}
+
+.day-card img {
+    filter: none;
+}
+
+.dark-mode .status, .dark-mode .temperature-display {
+    color: #fff;
+}
+
+.dark-mode .autocomplete-item, .dark-mode .autocomplete-item:hover {
+    color: #ddd; 
+}
+
+.day-card, .modal-content {
+    padding: 0; 
+    margin: 0;  
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
